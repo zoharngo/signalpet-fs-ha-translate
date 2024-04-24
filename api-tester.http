@@ -1,0 +1,67 @@
+
+
+POST /translate HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Content-Length: 47
+
+{
+  "q": "Hello, world!",
+  "source": "en",
+  "target": "he"
+}
+
+###
+
+POST  /detect HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Content-Length: 47
+
+{
+  "q": "Hello, world!"
+}
+
+###
+
+
+POST  /translator/report HTTP/1.1
+Host: localhost:3001
+Content-Type: application/json
+Content-Length: 47
+
+{
+  "text": [
+    "test",
+    "Instant Point-of-Care Radiology Results",
+    "Report",
+    "ID: 91",
+    "Service:",
+    "Date:",
+    "Hospital Details",
+    "Patient Details",
+    "Owner Name",
+    "Patient Name",
+    "Patient Id",
+    "Species",
+    "Breed",
+    "Gender",
+    "Neutered",
+    "Abnormal Findings",
+    "Confidence",
+    "Retained Root(s)",
+    "Superimposition - Centimeter",
+    "Normal Findings",
+    "Confidence",
+    "Gastric Distension",
+    "Appendicular Bone Fracture",
+    "Appendicular Bone Fracture",
+    "Centimeter - Collimate",
+    "Additional Information",
+    "Summary: The x-ray analysis revealed Radiolucent in the Gonad Shield region, indicating possible Magnification."
+],
+  "targetLanguage": "en"
+}
+
+###
+
